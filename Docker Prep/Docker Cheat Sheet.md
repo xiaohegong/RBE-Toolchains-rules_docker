@@ -3,7 +3,7 @@
 ## Set up and first docker image
 Install docker at: http://go/installdocker
 
-#####Test if installed successfully
+##### Test if installed successfully
 ```
 sudo docker run hello-world
 ```
