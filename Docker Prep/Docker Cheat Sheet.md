@@ -59,7 +59,7 @@ To summarize
 
 ## Image creation
 How to create our own images
-####Image creation from a container
+#### Image creation from a container
 This will create a image that "records" every package and configuration process that was installed to the application.
 With this image created, we can easily share these configurations in order for the team to get the exact configured application.
 
