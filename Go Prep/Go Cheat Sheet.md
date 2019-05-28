@@ -1,4 +1,4 @@
-#Go Cheat Sheet
+# Go Cheat Sheet
 
 ### Packages
 Must import package `main` in order to run program.

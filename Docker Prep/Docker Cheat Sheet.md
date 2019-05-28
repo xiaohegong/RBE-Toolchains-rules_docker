@@ -142,5 +142,5 @@ Run `docker image inspect alpine` for information on image *alpine*:
   - driver
   - architecture and metadata
   - .....
-  -
+
 To inspect the list of layers run `docker image inspect --format "{{ json .RootFS.Layers }}" alpine`
