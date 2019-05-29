@@ -26,6 +26,7 @@ cc_binary(
 @recommended reet",
 @recommended
 @recommended
+)
 ```
 - If there are $x$ packages in the project, would have $x$ subdirectories each containing a BUILD file.
 
@@ -50,3 +51,25 @@ Syntax for *labels*: `//path/to/package:target-name`
   - same path - `//:target-name`
 - If the target is a rule target, `path/to/package` is the path to the directory containing the BUILD file
 - If the target is a file target then `path/to/package` is the path to the root of the file
+
+## Rules
+A rule defines the set of actions that Bazel should perform to get the outputs.
+
+A new rule : `
+my_rule = rule(...)
+`
+Load the rule in BUILD files: `load('//some/pkg:whatever.bzl', 'my_rule')`
+
+#### Attributes
+Attributes are used to define the set of
+
+
+## Starlark Language
+The language used in Bazel (BUILD and .bzl files), syntactically a subset of Python 3.
+Some small differences with Python include:
+  - global variables $\iff$ `const`
+  - `for` and `if` have to be inside of a function
+  - no recursion, while, yield
+  - class $\rightarrow$ struct, import $\rightarrow$ load
+  - string concatenation, lambda, chained comparisons, float and set are not supported
+
