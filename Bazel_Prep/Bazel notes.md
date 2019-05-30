@@ -115,7 +115,7 @@ Use `ctx.outputs` to access output attributes (can't use `ctx.attr` since it onl
 
 #### Actions
 Execute actions to generate a set of outputs from a set of inputs.
-  - `ctx.actions.run`  $\rightarrow$ run an executable
+  - `ctx.actions.run`  $`\rightarrow`$ run an executable
   - `ctx.actions.run_shell`  $\rightarrow$ run a shell command
   - `ctx.actions.write`  $\rightarrow$ write a string to a file
   - `ctx.actions.expand_template`  $\rightarrow$ to generate a file from a template
