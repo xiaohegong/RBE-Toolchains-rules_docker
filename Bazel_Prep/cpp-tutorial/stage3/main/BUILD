@@ -1,16 +1,25 @@
-load("//main:my_rule.bzl", "my_rule")
+load("//main:providers.bzl", "msg_rule", "msg_rule2")
 
-my_rule(
-  name = "hello-greet",
-  srcs = ["hello-greet.cc"],
+msg_rule2(
+  name = "dep1",
+  message = "Hi, I am msg 1\n",
 )
 
+msg_rule2(
+  name = "dep2",
+  message = "Hi, I am msg 2\n",
+)
 
-cc_binary(
-    name = "hello-world",
-    srcs = ["hello-world.cc"],
+msg_rule2(
+  name = "dep3",
+  message = "Hi, I am msg 3\n",
+)
+
+msg_rule(
+    name = "msg",
     deps = [
-        ":hello-greet",
-        "//lib:hello-time",
+        ":dep1",
+        ":dep2",
+        ":dep3",
     ],
 )
